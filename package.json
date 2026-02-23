@@ -1,15 +1,24 @@
 {
   "name": "labprog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Лабораторная работа по TypeScript с тестами",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
   },
-  "keywords": [],
+  "keywords": ["typescript", "vitest", "testing"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^1.0.0",
+    "@vitest/ui": "^1.0.0",
+    "@types/node": "^20.0.0"
   }
 }
